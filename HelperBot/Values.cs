@@ -1,8 +1,8 @@
 //HelperBot - Copyright (c) Jonty800 and LeChosenOne <2013> (http://forums.au70.net)
 //This plugin is open source and designed to be used with 800Craft and LegendCraft server softwares
+using GemsCraft.Players;
 using System;
 using System.Collections.Generic;
-using fCraft;
 
 /*        ____
          [____]   ____
@@ -16,23 +16,24 @@ using fCraft;
         '.____.'|      |
                 '.____.'*/
 
-namespace HelperBot {
+namespace HelperBot
+{
 
     /// <summary>
     /// This class will be used to store constant values, such as arrays of replies
     /// </summary>
     ///
-    public static class Values {
+    public static class Values
+    {
 
         /// <summary>
         /// The name of the bot, colored using Settings.BotNameColor
         /// </summary>
         /// <returns>Settings.BotNameColor + Name;</returns>
-        public static string ClassyName {
-            get { return Settings.BotNameColor + Settings.Name; }
-        }
+        public static string ClassyName => Init.Instance.BotColor + Init.Instance.Name;
 
-        public struct TYObject {
+        public struct TYObject
+        {
             public Player player;
             public DateTime Time;
         }
